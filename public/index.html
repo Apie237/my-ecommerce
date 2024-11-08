@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Website With Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo">Ecommerce</a>
+            <button id="signUpBtn">Sign Up</button>
+            <button id="loginBtn">Login</button>
+            <i class='bx bxs-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <div class="cart-content">
+                </div>
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+                <button type="button"  class="btn-buy">Pay Now</button>
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>    
+        </div>    
+    </header>
+    <section class="shop-container">
+        <h2 class="section-title">Shop products</h2>
+        <div class="shop-content">
+           <div class="product-box">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgh6PeJoE3BBKMQqmCegqySpbY9gbdrFY2bQ268S2tulI87x_T9q01DkHiuhOgTZdjL_hyphenhyphenBBY6b4hB2fmK2QbJpQA_jalt2Oe5lkaqnmSU2AJ7xTBwUzN5pyDzZaVMdsJHPM4fAwDHe6EnzHnwl_yqXoGwMs3tRLYjc-7ely4R72mVPfX3OFZwtYyzo3Q2l/s177/versace%20odisea.webp" 
+                 alt="" 
+                 class="product-img"
+            />
+            <h2 class="product-title">VERSACE SHOES</h2>
+            <span class="price">$ 1000</span>
+            <i class='bx bx-shopping-bag add-cart' ></i>
+           </div> 
+           <div class="product-box">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgs38-JJUjgmTIEt2jlPUv9F0eSaU8_8aWCqFqBJe8yqVuEkm7kBBW73Zmmf6D5uJxDzsipLlRS6RqH5SasEvly7Iiue6nuolyeVmzwYhNR4Db5XQwC7C3bapfEERE_yzbSv_Mi-pnfHvXt5x9iNa00ILysZVHimpuewO-AJm08XAVvou0DGSFKMpcyzhQk/s1600/earbuds.webp" 
+                 alt="" 
+                 class="product-img"
+            />
+            <h2 class="product-title">EARBUDS</h2>
+            <span class="price">$ 55</span>
+            <i class='bx bx-shopping-bag add-cart' ></i>
+           </div> 
+           <div class="product-box">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiqzofgbCGhyphenhyphenVYNYw0X_0-d9Wg2C-NqH4WlI9RQCK9a-ony9qqFCvyqwU-geQ6Ke_imB5dDMsNgSuVYmKP6WbqlTLz6P6wWpvwYDZlxYH-AtGZr4CvTaQQ3v7ZyCl7fCfRn40GelEpTHPQWZtquUKVq5vFPOWUmaYfRAL531psI3ddRmm4O0pIBrLCHjzD/s225/moccasins.jpeg" 
+                 alt="" 
+                 class="product-img"
+            />
+            <h2 class="product-title">MOCASSINS</h2>
+            <span class="price">$ 79.9</span>
+            <i class='bx bx-shopping-bag add-cart' ></i>
+           </div> 
+           <div class="product-box">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRBAwdZxCnfB9JzjIxKMoiILLjTD3gvljR5ruvBtgsKFpDl40t1tyvvsGVaf33sSRpMD1Xi44g3juaF8IilCTPB1BWuEXwPvKgkfxeNDU9tQA__0m84RbpmMuqFjUZgbbNGHuXtrk33cx0Re-WtP3cMQnRCifl1ywqriBFV8QanSbFvA32CzA9ySyAORdP/s166/men%20suit.webp"
+                 alt="" 
+                 class="product-img"
+            />
+            <h2 class="product-title">MEN SUIT</h2>
+            <span class="price">$ 1000</span>
+            <i class='bx bx-shopping-bag add-cart' ></i>
+           </div> 
+           <div class="product-box">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRapnN-44E_N5FSBUmrTcNL1qtHKFGyyzuWnMAzQFBl3D-Xnr3sa2DAp50Zqsfz86qr2cshNHDSToI4FtFNgeYyLAQzEnaGXqqQ3qviKzXSQb_o61h5E8X-cEFHFmGblj-4vrCporTjxM9FP3of97Vlm0NqXxi_CSrutssJGnQb_sPbZELlMBLSkTkWELM/s1600/jean%20shirt.jpeg" 
+                 alt="" 
+                 class="product-img"
+            />
+            <h2 class="product-title">MEN JEANS</h2>
+            <span class="price">$ 120</span>
+            <i class='bx bx-shopping-bag add-cart' ></i>
+           </div> 
+           <div class="product-box">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQCZ52_-8QY069ILeHSfFmOizs2IHNLyw8AmytfKE3P7CkUVibfgbtiOrS727u-bK1iu5ZF-80pHkaKMSVbVhzA-v05JTxi-sPGZgHax_r7uPrlOJ1iiT6u7_hhG27dyRXKedesGYwF19Dg74_AtfnJRW7qgB5zjEux1UBE5lzVMFFO_bIm7CKvGpPlzhF/s1600/coconut%20print.webp" 
+                 alt="" 
+                 class="product-img"
+            />
+            <h2 class="product-title">BEACH PRINT WHITE</h2>
+            <span class="price">$ 230</span>
+            <i class='bx bx-shopping-bag add-cart' ></i>
+           </div> 
+           <div class="product-box">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAfNmD8P6Fa3oEp1wK8ZZOxnH-w9r82FpjBvrnXV2zJZtlOPJlJXUwT6kpBh6ycoP0haajjfJ8NU0lr36TDHE4iqDHrCH9QI52j6bN4ETGE9d5Svw4uaLYjfmvZJhkPe2bYyqm6-E-c5Y-NZw1Ss3dXMaKP67sRLLHvef4htfQt7QBQnTixFUKAJV7WDvn/s1600/apple%20macbook.jpeg" 
+                 alt="" 
+                 class="product img"
+            />
+            <h2 class="product-title">APPLE MAC</h2>
+            <span class="price">$ 4000</span>
+            <i class='bx bx-shopping-bag add-cart' ></i>
+           </div> 
+           <div class="product-box">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6lDvF1ypEh2CU5JxTpD1M0jNfIOGpHsoAZDIgjc8mjrSzM-nmcq8Pf0_88ONXBDaGcJRgQoCe2OVtcmXNdkNBJEMeKQwG0ZmckX9OQX2zcwHEgglDILp4apj9hCZwyTHNJdNOGNhbdMxkiIT2yzCY7CcjrWoQmPWyiSXLK4Wbghc0cuRna9GkNKFq-HY5/s1600/beach%20print.webp" 
+                 alt="" 
+                 class="product-img"
+            />
+            <h2 class="product-title">BEACH PRINT BLUE</h2>
+            <span class="price">$ 230</span>
+            <i class='bx bx-shopping-bag add-cart' ></i>
+           </div> 
+        </div>
+     </section>  
+     <!-- Signup Modal -->
+<div id="signup-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Sign Up</h2>
+        <form id="signup-form" action="post">
+            <input type="email" id="signup-email" placeholder="Email" required />
+            <input type="password" id="signup-password" placeholder="Password" required />
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+
+<!-- Login Modal -->
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form" action="post">
+            <input type="email" id="login-email" placeholder="Email" required />
+            <input type="password" id="login-password" placeholder="Password" required />
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+   <script src="main.js"></script>
+   <script src="cart.js"></script>
+
+</body>
+</html>
