@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "main.js",
   "engines": {
-    "node": "22.11.0"
+    "node": "20.x"
   },
   "type": "module",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
