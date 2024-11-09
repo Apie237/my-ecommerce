@@ -9,9 +9,10 @@ import User from './model/users.js';
 
 dotenv.config();
 
-mongoose.connect("mongodb://localhost:27017/market")
-        .then(() => console.log("connected to Database"))
-        .catch((err) => console.log(`Error: ${err}`))
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("Connected to Database"))
+  .catch((err) => console.error(`Error: ${err}`));
+
 
 // Initialize app
 const app = express();
@@ -24,7 +25,7 @@ app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: "mongodb://localhost:27017/market" })
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URI })
 }));
 
 
@@ -39,10 +40,10 @@ app.get('/', (req, res) => {
 });
 
 // Routes for success and cancel pages (after payment)
-app.get('/success', (req, res) => {
+app.get('/api/success', (req, res) => {
     res.sendFile('success.html', { root: 'public' });
 });
-app.get('/cancel', (req, res) => {
+app.get('/api/cancel', (req, res) => {
     res.sendFile('cancel.html', { root: 'public' });
 });
 
@@ -52,16 +53,17 @@ app.get('/cancel', (req, res) => {
 
 // Route for signup
 app.post('/signup', async (req, res) => {
-    const { email, password } = req.body;
     try {
-        const hashedPassword = await bcrypt.hash(password, 10); // Hash password
-        const newUser = new User({ email, password: hashedPassword });
-        await newUser.save();
-        res.status(201).json({ message: "User created" });
+      const hashedPassword = await bcrypt.hash(req.body.password, 10);
+      const newUser = new User({ email: req.body.email, password: hashedPassword });
+      await newUser.save();
+      res.status(201).json({ message: "User created" });
     } catch (err) {
-        res.status(500).json({ error: "Failed to create user" });
+      console.error("Signup error:", err);
+      res.status(500).json({ error: "Failed to create user" });
     }
-});
+  });
+  
 
 // Route for login
 app.post('/login', async (req, res) => {
